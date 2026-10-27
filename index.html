@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse One | Wireless Headphones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <nav class="nav container">
+    <a class="logo" href="#home"><span>P</span> pulseone</a>
+    <button class="menu" id="menu" aria-label="Toggle menu">☰</button>
+    <ul id="navLinks">
+      <li><a href="#features">Features</a></li><li><a href="#design">Design</a></li><li><a href="#reviews">Reviews</a></li>
+    </ul>
+    <a class="nav-button" href="#buy">Get Pulse One ↗</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home"><div class="container hero-grid">
+  <div class="hero-copy">
+    <p class="eyebrow">● INTRODUCING PULSE ONE</p>
+    <h1>Your world.<br><em>Your sound.</em></h1>
+    <p class="lead">Meet your new everyday headphones. Rich, detailed audio, a comfortable fit, and a battery that keeps up with you.</p>
+    <div class="actions"><a class="button dark" href="#buy">Explore Pulse One →</a><a class="plain-link" href="#features">Discover the details ↓</a></div>
+    <div class="proof"><div class="bubbles"><b>J</b><b>A</b><b>M</b></div><p><strong>Loved by music fans</strong><small>Made for your everyday soundtrack</small></p></div>
+  </div>
+  <div class="hero-art"><div class="halo"></div><span class="tag tag-top">● PURE SOUND</span>
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=85" alt="Over-ear headphones product photograph">
+    <span class="tag tag-bottom">PULSE ONE · SERIES 01</span>
+    <div class="float-card"><b>♫</b><p><strong>Sound that moves you</strong><small>Immersive audio experience</small></p></div>
+  </div>
+</div><div class="container hero-foot"><span>DESIGNED FOR EVERY DAY</span><span>01 / 03</span></div></section>
+<section class="feature-strip" id="features"><div class="container feature-list">
+  <article><b>♫</b><p><strong>Immersive audio</strong><small>Every detail, every beat</small></p></article>
+  <article><b>◷</b><p><strong>All-day battery</strong><small>Up to 40 hours*</small></p></article>
+  <article><b>⌁</b><p><strong>Comfort fit</strong><small>Soft, lightweight design</small></p></article>
+  <article><b>↗</b><p><strong>Easy connection</strong><small>Simple wireless pairing</small></p></article>
+</div></section>
+<section class="section" id="design"><div class="container">
+  <div class="section-head"><div><p class="eyebrow">MADE FOR YOUR MOMENTS</p><h2>More than music.<br><em>A feeling.</em></h2></div><p class="muted">From your morning commute to your late-night playlist, Pulse One makes room for the sounds you love.</p></div>
+  <div class="cards">
+    <article class="card big-card"><img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1100&q=85" alt="Music studio equipment"><div class="overlay"><small>01 / SOUND</small><h3>Feel every layer.</h3><p>Clear highs, full bass, and balanced sound for your favorite tracks.</p></div></article>
+    <article class="card comfort"><div class="art-symbol">P<span>✳</span></div><div class="card-copy"><small>02 / COMFORT</small><h3>Made to stay on.</h3><p>Soft ear cushions and a lightweight feel for long listening sessions.</p></div></article>
+    <article class="card battery"><div class="battery-art"><div class="battery-icon"><span></span></div><b>40<small>h</small></b><label>LISTEN LONGER</label></div><div class="card-copy"><small>03 / BATTERY</small><h3>Keep your rhythm.</h3><p>Enjoy more listening between charges.*</p></div></article>
+  </div><p class="fine-print">*Battery figure is illustrative for this student project. Replace with verified product specifications for a real product.</p>
+</div></section>
+<section class="review" id="reviews"><div class="container"><p class="eyebrow">THE PULSE ONE EXPERIENCE</p><div class="stars">★★★★★</div><blockquote>“A little escape, wherever the day takes me.”</blockquote><p class="muted">A sample testimonial for this demo landing page</p></div></section>
+<section class="buy-section" id="buy"><div class="container buy-panel"><div class="buy-copy"><p class="eyebrow">YOUR SOUND STARTS HERE</p><h2>Ready to press<br><em>play?</em></h2><p>Meet the headphones designed to make everyday listening feel special.</p><a class="button light" href="mailto:hello@example.com?subject=Pulse%20One%20Product%20Enquiry">Enquire about Pulse One ↗</a></div><div class="buy-art"><div class="buy-halo"></div><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85" alt="Pulse One headphones" loading="lazy"><div class="price"><small>DEMO PRICE</small><strong>₹4,999</strong></div></div></div></section>
+</main>
+<footer><div class="container footer-top"><a class="logo" href="#home"><span>P</span> pulseone</a><p>Find your rhythm. Wherever you go.</p><a href="#home">Back to top ↑</a></div><div class="container footer-bottom"><span>© <span id="year"></span> Pulse One. Student project demo.</span><span>Designed with HTML & CSS</span></div></footer>
+<script>
+const menu = document.getElementById('menu');
+const navLinks = document.getElementById('navLinks');
+menu.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  menu.setAttribute('aria-expanded', String(open));
+  menu.textContent = open ? '✕' : '☰';
+});
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  navLinks.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); menu.textContent = '☰';
+}));
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
